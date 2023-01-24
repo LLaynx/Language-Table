@@ -18,6 +18,9 @@ Main.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
 Main.BackgroundTransparency = 0.200
 Main.Position = UDim2.new(0.546195805, 0, 0.267405063, 0)
 Main.Size = UDim2.new(0.182551324, 0, 0.430379748, 0)
+Main.Draggable = true
+Main.Active = true
+Main.Selectable = true
 
 UICorner.Parent = Main
 
