@@ -1,0 +1,81 @@
+local Language = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local TextLabel_2 = Instance.new("TextLabel")
+local clear = Instance.new("ImageButton")
+
+Language.Name = "Language"
+Language.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Language.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = Language
+Main.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+Main.BackgroundTransparency = 0.200
+Main.Position = UDim2.new(0.546195805, 0, 0.267405063, 0)
+Main.Size = UDim2.new(0.182551324, 0, 0.430379748, 0)
+
+UICorner.Parent = Main
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(116, 116, 116)
+TextLabel.Size = UDim2.new(1, 0, 0.091911763, 0)
+TextLabel.Font = Enum.Font.Fantasy
+TextLabel.Text = "Language"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_2.Parent = TextLabel
+
+ScrollingFrame.Parent = Main
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.Position = UDim2.new(-0.000942885876, 0, 0.0914929509, 0)
+ScrollingFrame.Size = UDim2.new(1, 0, 0.908088207, 0)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 7.5999999, 0)
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+TextLabel_2.Parent = ScrollingFrame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(-0.324943304, 0, -5.32028961, 0)
+TextLabel_2.Size = UDim2.new(0, 249, 0, 2078)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "af = Afrikaans\nsq = Albanian\nam = Amharic\nar = Arabic\nhy = Armenian\naz = Azerbaijani\neu = Basque\nbe = Belarusian\nbn = Bengali\nbs = Bosnian\nbg = Bulgarian\nca = Catalan\nceb = Cebuano\nny = Chichewa\nzh-cn = Chinese Simplified\nzh-tw = Chinese Traditional\nco = Corsican\nhr = Croatian\ncs = Czech\nda = Danish\nnl = Dutch\nen = English\neo = Esperanto\net = Estonian\ntl = Filipino\nfi = Finnish\nfr = French\nfy = Frisian\ngl = Galician\nka = Georgian\nde = German\nel = Greek\ngu = Gujarati\nht = Haitian Creole\nha = Hausa\nhaw = Hawaiian\niw = Hebrew\nhi = Hindi\nhmn = Hmong\nhu = Hungarian\nis = Icelandic\nig = Igbo\nid = Indonesian\nga = Irish\nit = Italian\nja = Japanese\njw = Javanese\nkn = Kannada\nkk = Kazakh\nkm = Khmer\nko = Korean\nky = Kyrgyz\nlo = Lao\nla = Lati\nlv = Latvian\nlt = Lithuanian\nlb = Luxembourgish\nmk = Macedonian\nmg = Malagasy\nms = Malay\nml = Malayalam\nmt = Maltese\nmi = Maori\nmr = Marathi\nmn = Mongolian\nmy = Myanmar (Burmese)\nne = Nepali\nno = Norwegian\nps = Pashto\nfa = Persian\npl = Polish\npt = Portuguese\npa = Punjabi\nro = Romanian\nru = Russian\nsm = Samoan\ngd = Scots Gaelic\nsr = Serbian\nst = Sesotho\nsn = Shona\nsd = Sindhi\nsi = Sinhala\nsk = Slovak\nsl = Slovenian\nso = Somali\nes = Spanish\nsu = Sundanese\nsw = Swahili\nsv = Swedish\ntg = Tajik\nta = Tamil\nte = Telugu\nth = Thai\ntr = Turkish\nuk = Ukrainian\nur = Urdu\nuz = Uzbek\nvi = Vietnamese\ncy = Welsh\nxh = Xhosa\nyi = Yiddish\nyo = Yoruba\nzu = Zulu"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 20.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+TextLabel_2.TextYAlignment = Enum.TextYAlignment.Top
+
+clear.Name = "clear"
+clear.Parent = Main
+clear.BackgroundTransparency = 1.000
+clear.LayoutOrder = 5
+clear.Position = UDim2.new(0.897590399, 0, 0, 0)
+clear.Size = UDim2.new(0.10040161, 0, 0.091911763, 0)
+clear.ZIndex = 2
+clear.Image = "rbxassetid://3926305904"
+clear.ImageRectOffset = Vector2.new(924, 724)
+clear.ImageRectSize = Vector2.new(36, 36)
+
+-- Scripts:
+
+local function FWYPD_fake_script() -- Main.MainScript 
+	local script = Instance.new('LocalScript', Main)
+
+	script.Parent.clear.MouseButton1Up:Connect(function()
+		script.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(FWYPD_fake_script)()
